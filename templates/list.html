@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Blog Entries</h1>
+  <ul>
+    {% for entry in object_list %}
+      <li><h2><a href='post/{{entry.id}}'>{{entry.title}}</a></h2></li>
+    {% endfor %}
+  </ul>
+  <footer><a href="post/new">Create New Post</a></footer>
+  {% endblock content %}
+  
